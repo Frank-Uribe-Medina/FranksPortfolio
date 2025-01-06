@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  a {
+    text-decoration: none;
+    color: #0a0a0a; /* Default link color */
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: #0a0a0a; /* Match default link color to avoid purple */
+  }
+  
+  a:hover {
+    text-decoration: none; /* Optional: Add hover effect */
+    color: #0a0a0a; /* Darker shade for hover */
+  }
+  
+  a:focus, a:active {
+    outline: none; /* Remove focus outline */
+    color: #0a0a0a; /* Another optional shade for active links */
+  }
+  /* Logout Button */
+  #logout-btn {
+    background: #dc3545; /* Red color for emphasis */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  #logout-btn:hover {
+    background: #c82333; /* Darker red on hover */
+    transform: scale(1.05);
+  }
+  
+  #logout-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+  }
+  
+  /* Homepage */
+  #homepage {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  header h1:nth-of-type(2) {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Modules */
+  .modules {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 2rem 0;
+  }
+  
+  .module {
+    background: white;
+    padding: 1.5rem;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+  
+  }
+  
+  
+  
+  .module:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .modules {
+      gap: 1.5rem;
+    }
+  
+    header h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modules {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .module {
+      width: 100%; /* Full width on small screens */
+      max-width: 400px; /* Add a max-width to prevent excessive stretching */
+      margin: auto;
+    }
+  
+    #logout-btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.2rem;
+    }
+  
+    #logout-btn {
+      padding: 0.4rem 0.7rem;
+      font-size: 0.8rem;
+    }
+  }
+  

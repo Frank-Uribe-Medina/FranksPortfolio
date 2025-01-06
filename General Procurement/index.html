@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Procurement Web Apps</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <!-- Homepage -->
+    <div id="homepage">
+        <header>
+            <h1>General Procurement Web Apps</h1>
+            <h1>Welcome, User!</h1>
+            <a href="{{ url_for('logout')}}"><button id="logout-btn">Logout</button></a>
+        </header>
+        <main>
+            <section class="modules">
+                <a href="{{url_for('repricer')}}">
+                <div class="module">
+                    <h2>Repricer on the Web</h2>
+                    <p>Find the Pricing of a product in multiple marketplaces.</p>
+                </div>
+                </a>
+                <a href="{{url_for('bots')}}">
+                <div class="module">
+                    <h2>Purchase Bots</h2>
+                    <p>Purchase Items from multiple marketplaces!</p>
+                </div>
+                </a>
+                <a href="{{url_for('construction')}}">
+                <div class="module">
+                    <h2>New Tools</h2>
+                    <p>Exciting new tools will be added here!</p>
+                </div>
+                </a>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Solutions Portal | Designed for scalability and usability</p>
+        </footer>
+    </div>
+</body>
+</html>
